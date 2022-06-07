@@ -1,6 +1,9 @@
+import fractions
+
 #Software developed by Franco Hernandez
 
 print("Matriz inversa 3x3")
+print("Software by Francote Dev")
 
 def main():
     print("A B C")
@@ -112,10 +115,19 @@ def main():
     print(ResM3,ResM6,ResM9)
     print("")
 
-    print("Inversa :")
-    print(ResM1,"/",Determinante, ResM4,"/",Determinante, ResM7,"/",Determinante)
-    print(ResM2 ,"/", Determinante, ResM5 ,"/", Determinante, ResM8 ,"/", Determinante)
-    print(ResM3 ,"/", Determinante, ResM6 ,"/", Determinante, ResM9 ,"/", Determinante)
+    R1 = fractions.Fraction(ResM1, Determinante)
+    R2 = fractions.Fraction(ResM4, Determinante)
+    R3 = fractions.Fraction(ResM7, Determinante)
+    R4 = fractions.Fraction(ResM2, Determinante)
+    R5 = fractions.Fraction(ResM5, Determinante)
+    R6 = fractions.Fraction(ResM8, Determinante)
+    R7 = fractions.Fraction(ResM3, Determinante)
+    R8 = fractions.Fraction(ResM6, Determinante)
+    R9 = fractions.Fraction(ResM9, Determinante)
 
+    print("Inversa : ")
+    print(R1, -1*R2, R3)
+    print(-1*R4,R5,-1*R6)
+    print(R7,-1*R8,R9)
 
 main()
