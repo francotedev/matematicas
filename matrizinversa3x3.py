@@ -20,47 +20,57 @@ def main():
     H = int(input("Valor de H : "))
     I = int(input("Valor de I : "))
 
-    print(A,B,C)
-    print(D,E,F)
-    print(G,H,I)
+    print(A, B, C)
+    print(D, E, F)
+    print(G, H, I)
     print("")
 
 #Determinante
     Aux1 = A * E * I
+    Aux1B = D * H * C
+    Aux1C= G * B * F
+    Aux1D = Aux1 + Aux1B + Aux1C
+    print("Parte postiva de la determinante : ", Aux1D)
     Aux2 = G * E * C
-    Aux3 = Aux2 * -1
-    Aux4 = Aux1 + Aux3
-    Determinante = Aux4
-
-    print("Determinante : ",Aux4)
+    Aux2B = A * H * F
+    Aux2C = D * B * I
+    Aux2D = Aux2 + Aux2B + Aux2C
+    print("")
+    print("Parte negativa de la determinante : ", Aux2D)
+    Aux4 = Aux1D - Aux2D
     print("")
 
-    Mini1A = E,F,
-    Mini1B = H,I
+    Determinante = Aux4
 
-    Mini2A = D,F,
-    Mini2B = G,I
+    print("Determinante : ", Aux4)
+    print("")
 
-    Mini3A = D,E
-    Mini3B = G,H
+    Mini1A = E, F
+    Mini1B = H, I
 
-    Mini4A = B,C
-    Mini4B = H,I
+    Mini2A = D, F
+    Mini2B = G, I
 
-    Mini5A = A,C
-    Mini5B = G,I
+    Mini3A = D, E
+    Mini3B = G, H
 
-    Mini6A = A,B,
-    Mini6B = G,H
+    Mini4A = B, C
+    Mini4B = H, I
 
-    Mini7A = B,C
-    Mini7B = E,F
+    Mini5A = A, C
+    Mini5B = G, I
 
-    Mini8A = A,C
-    Mini8B = D,F
+    Mini6A = A, B
+    Mini6B = G, H
 
-    Mini9A = A,B
-    Mini9B = D,E
+    Mini7A = B, C
+    Mini7B = E, F
+
+    Mini8A = A, C
+    Mini8B = D, F
+
+    Mini9A = A, B
+    Mini9B = D, E
 
     ResM1 = (E*I) - (H*F)
     ResM2 = (D*I) - (G*F)
@@ -103,16 +113,16 @@ def main():
 
     print("Resultado de los Minis : ")
 #Resultado con Minis
-    print(ResM1,ResM2,ResM3)
+    print(ResM1, ResM2, ResM3)
     print(ResM4, ResM5, ResM6)
     print(ResM7, ResM8, ResM9)
     print("")
 
     print("Resultado Translacion : ")
 #Translacion
-    print(ResM1,ResM4,ResM7)
-    print(ResM2,ResM5,ResM8)
-    print(ResM3,ResM6,ResM9)
+    print(ResM1, ResM4, ResM7)
+    print(ResM2, ResM5, ResM8)
+    print(ResM3, ResM6, ResM9)
     print("")
 
     R1 = fractions.Fraction(ResM1, Determinante)
@@ -127,7 +137,7 @@ def main():
 
     print("Inversa : ")
     print(R1, -1*R2, R3)
-    print(-1*R4,R5,-1*R6)
-    print(R7,-1*R8,R9)
+    print(-1*R4, R5, -1*R6)
+    print(R7, -1*R8, R9)
 
 main()
