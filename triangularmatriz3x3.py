@@ -48,3 +48,4 @@ def main():
         print(A, B, C)
         print(AuxDA3, AuxEB2, AuxFC2)
         print(AuxGD3, AxHE3, AxIF2)
+main()
